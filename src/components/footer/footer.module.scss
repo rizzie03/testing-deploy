@@ -1,0 +1,58 @@
+@use "../base";
+
+.footer {
+  padding: 3.8rem 7rem;
+  background-color: base.$primary-color;
+  font-size: 14px;
+  color: base.$menu-color;
+  display: flex;
+  justify-content: space-between;
+
+  .textInfo {
+    color: base.$info-color;
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+
+  .head {
+    color: base.$white-color;
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+  }
+
+  #follow {
+    margin: 2rem 0 0.5rem;
+  }
+
+  .iconsContainer {
+    display: flex;
+
+    .iconContainer {
+      background-color: base.$icon-color;
+      border-radius: 50%;
+      width: 1.5rem;
+      height: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .icon {
+        color: base.$primary-color;
+      }
+    }
+  }
+
+  .copyright {
+    color: base.$info-color;
+    margin-top: 3rem;
+  }
+
+  .menu {
+    list-style: none;
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+}

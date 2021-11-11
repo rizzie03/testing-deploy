@@ -1,0 +1,32 @@
+@use "../base";
+
+.navbar {
+  background-color: base.$primary-color;
+  padding: 2rem 7rem;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+
+  .logo {
+    width: 14.25rem;
+  }
+
+  .navContainer {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+  }
+
+  .link {
+    color: base.$white-color;
+    text-decoration: none;
+    line-height: 3rem;
+    margin: 0 1rem;
+    font-size: 1.25rem;
+
+    &:visited {
+      text-decoration: none;
+    }
+  }
+}

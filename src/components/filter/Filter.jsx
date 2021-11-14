@@ -24,8 +24,7 @@ function Filter() {
         className={FilterStyle.option}
         onClick={() => {
           handleShow();
-        }}
-      >
+        }}>
         <p id={FilterStyle.chosen}>{chosen}</p>
         <IoIosArrowDown
           className={FilterStyle.optionArrow}
@@ -40,15 +39,14 @@ function Filter() {
         {options.filterByDate.map((data) => (
           <li
             style={show === false ? { display: "none" } : { display: "block" }}
-            onClick={() => handleChosen(`${data}`)}
-          >
+            onClick={() => handleChosen(`${data}`)}>
             <input
-              type="radio"
-              name="optionsByDate"
-              id="optionsByDate"
-              value=""
+              type='radio'
+              name='optionsByDate'
+              id='optionsByDate'
+              value=''
             />
-            <label htmlFor="optionsByDate">{data}</label>
+            <label htmlFor='optionsByDate'>{data}</label>
           </li>
         ))}
       </ul>

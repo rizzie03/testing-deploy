@@ -1,0 +1,11 @@
+@use "../base";
+
+.detailuser {
+  padding: 0;
+  margin: 0;
+
+  .dateCategory {
+    color: base.$info-color;
+    text-align: center;
+  }
+}

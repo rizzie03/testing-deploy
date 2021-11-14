@@ -7,7 +7,7 @@ import footerstyle from "./footer.module.scss";
 function Footer() {
   return (
     <footer className={footerstyle.footer}>
-      <div className="footerCol1">
+      <div className={footerstyle.footerCol1}>
         <img src={LogoFooter} alt="logo" />
         <p className={footerstyle.textInfo}>
           SeeEvent is a platform where you can create or find an amazing events
@@ -34,7 +34,7 @@ function Footer() {
           &copy; 2021 SeeEvent All rights reserved.
         </p>
       </div>
-      <div className="footerCol2">
+      <div className={footerstyle.footerCol2}>
         <p className={footerstyle.head}>Links</p>
         <ul className={footerstyle.menu}>
           <li>Home</li>
@@ -43,7 +43,7 @@ function Footer() {
           <li>Bookmarks</li>
         </ul>
       </div>
-      <div className="footerCol3">
+      <div className={footerstyle.footerCol3}>
         <p className={footerstyle.head}>Top Categories</p>
         <ul className={footerstyle.menu}>
           <li>Design</li>
@@ -52,12 +52,16 @@ function Footer() {
           <li>Marketing</li>
         </ul>
       </div>
-      <div className="footerCol4">
-        <p className={footerstyle.head}>Contact Us</p>
-        <p className={footerstyle.textInfo}>
-          Indonesia Jl. Planet Namek No. 123, Surabaya Telp : 083849420146 Email
-          : Johndoe@seeevent.com
-        </p>
+      <div className={footerstyle.footerCol4}>
+        <div>
+          <p className={footerstyle.head}>Contact Us</p>
+          <p className={footerstyle.menu}>
+            Indonesia <br />
+            Jl. Planet Namek No. 123, Surabaya <br />
+            Telp : 083849420146 <br />
+            Email : Johndoe@seeevent.com
+          </p>
+        </div>
         <ul className={footerstyle.menu}>
           <li>Privacy Policy</li>
           <li>Terms of Service</li>

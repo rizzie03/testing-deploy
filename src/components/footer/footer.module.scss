@@ -8,6 +8,27 @@
   display: flex;
   justify-content: space-between;
 
+  &Col1 {
+    width: 25rem;
+  }
+
+  &Col4 {
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    ul {
+      display: flex;
+      width: 70%;
+      justify-content: space-between;
+
+      li {
+        margin-bottom: 0.2rem;
+      }
+    }
+  }
+
   .textInfo {
     color: base.$info-color;
     font-size: 1rem;
@@ -36,6 +57,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      margin-right: 0.5rem;
+      cursor: pointer;
 
       .icon {
         color: base.$primary-color;
@@ -45,14 +68,20 @@
 
   .copyright {
     color: base.$info-color;
-    margin-top: 3rem;
+    margin-top: 2.5rem;
   }
 
   .menu {
     list-style: none;
+    line-height: 1.5rem;
+
+    ul {
+      display: flex;
+    }
 
     li {
       margin-bottom: 0.5rem;
+      cursor: pointer;
     }
   }
 }

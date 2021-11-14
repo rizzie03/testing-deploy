@@ -1,0 +1,57 @@
+@use "../base";
+
+.card {
+  border-radius: 8px;
+  width: 22.5%;
+  font-size: 0.75rem;
+  transition: all 0.5s;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  margin: 1.5rem 0;
+
+  &:hover {
+    box-shadow: 4px 2px 16px 2px #21445726;
+    opacity: 0.75;
+  }
+
+  &Link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &Image {
+    width: 100%;
+    border-radius: 8px 8px 0px 0px;
+    margin-bottom: 1rem;
+  }
+
+  &Text {
+    padding: 0 0.25rem 1rem;
+
+    &Chip {
+      all: unset;
+      background-color: #f0f2e9;
+      color: base.$primary-color;
+      padding: 0.25rem 1rem;
+      border-radius: 4px;
+      margin-bottom: 0.5rem;
+    }
+
+    &Time {
+      color: #373737;
+      margin-bottom: 0.5rem;
+    }
+
+    &PostTitle {
+      font-size: 1rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    &Author {
+      color: #999999;
+    }
+  }
+}

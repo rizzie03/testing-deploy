@@ -7,10 +7,8 @@ export default function Details() {
     <>
       <div className={detailstyle.Details}>
         <div className={detailstyle.Title}>
-          <div className={detailstyle.Content}>
-            <div className={detailstyle.Top}>
-              <h1>ESL Game: English on Your Feet!</h1>
-            </div>
+          <div className={detailstyle.Top}>
+            <h1>ESL Game: English on Your Feet!</h1>
             <div className={detailstyle.dateCategory}>
               <FiCalendar className={detailstyle.icon} />
               <p>SUN, OCT 24 @ 1:15 AM ICT</p>
@@ -20,6 +18,8 @@ export default function Details() {
                 alt='{image}'
               />
             </div>
+          </div>
+          <div className={detailstyle.Content}>
             <div className={detailstyle.Container}>
               <h1>Details</h1>
               <p>Welcome to the Parlor! Let's play English on Your Feet!™</p>

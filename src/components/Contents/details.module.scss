@@ -1,0 +1,19 @@
+@use "../base";
+
+.details {
+  padding: 0;
+  margin: 0;
+
+  .top {
+    justify-content: center;
+  }
+
+  .avatar {
+    border-radius: 50%;
+  }
+
+  .dateCategory {
+    color: base.$info-color;
+    text-align: center;
+  }
+}

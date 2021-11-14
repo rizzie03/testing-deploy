@@ -1,14 +1,11 @@
 @use "../base";
 
 .details {
-  padding: 0;
-  margin: 0;
-
-  .top {
-    justify-content: center;
-  }
+  margin : 50%;
+  justify-content: center;
 
   .avatar {
+    width: 100%;
     border-radius: 50%;
   }
 

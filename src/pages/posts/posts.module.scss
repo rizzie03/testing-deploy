@@ -1,0 +1,74 @@
+@use "../../components/base";
+
+.post {
+  padding: 10rem 14rem;
+  position: relative;
+
+  h2 {
+    margin: 2rem 0;
+  }
+
+  &Commenter {
+    width: 30rem;
+    position: relative;
+
+    &ProfileUser {
+      display: flex;
+      margin: 2rem 0 1rem;
+
+      &PP {
+        @extend %profilePictureContainer;
+
+        img {
+          @extend %profilePicture;
+        }
+      }
+
+      &Info {
+        margin-left: 1.25rem;
+
+        p {
+          font-weight: 700;
+          line-height: 2.5rem;
+        }
+      }
+    }
+  }
+
+  textarea {
+    all: unset;
+    resize: none;
+    border: 1px solid #999999;
+    outline: #999999;
+    border-radius: 10px;
+    padding: 1rem;
+    width: calc(100% - 6rem);
+    word-wrap: break-word;
+    display: block;
+  }
+
+  .postCommenterSubmit {
+    all: unset;
+    font-size: 1rem;
+    display: block;
+    background-color: base.$primary-color;
+    color: base.$white-color;
+    padding: 0.5rem;
+    width: 7.5rem;
+    border-radius: 10px;
+    position: absolute;
+    right: 4rem;
+    margin-top: 1rem;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    .commentIcon {
+      font-size: 1.25rem;
+      margin-right: 1rem;
+    }
+  }
+}

@@ -20,3 +20,15 @@ $secondary-color: #f2d555;
   padding-left: 1rem;
   cursor: pointer;
 }
+
+%profilePictureContainer {
+  width: 2.75rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+%profilePicture {
+  height: 100%;
+  object-fit: contain;
+}

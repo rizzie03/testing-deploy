@@ -1,0 +1,33 @@
+@use "../base";
+
+.comment {
+  margin: 2.5rem 0;
+  width: 30rem;
+
+  &ProfileUser {
+    display: flex;
+    margin: 2rem 0 1rem;
+
+    &PP {
+      @extend %profilePictureContainer;
+
+      img {
+        @extend %profilePicture;
+      }
+    }
+
+    &Info {
+      margin-left: 1.25rem;
+
+      p {
+        font-weight: 700;
+      }
+
+      p:last-child {
+        font-size: 0.75rem;
+        color: #373737;
+        font-weight: normal;
+      }
+    }
+  }
+}

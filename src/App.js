@@ -5,14 +5,20 @@ import SignIn from "./pages/signin/SignIn";
 
 import Headers from "./components/header/Header";
 import Footer from "./components/footer/Footer";
+import Home from "./pages/home/Home";
+import Events from "./pages/events/Events";
+import NotFound from "./pages/notfound/NotFound";
 
 function App() {
   return (
     <Router>
       <Headers />
       <Routes>
+        <Route exact path="/" element={<Home />} />
         <Route exact path="/signup" element={<SignUp />} />
         <Route exact path="/signin" element={<SignIn />} />
+        <Route exact path="/events" element={<Events />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </Router>

@@ -1,44 +1,120 @@
 @use "../base";
 
-.title {
-  .top {
-    padding: 150px 150px 0px 350px;
-    z-index: index 2;
-    flex-wrap: wrap;
+.details {
+  &Title {
+    font-weight: 700;
   }
 
-  .dateCategory {
+  &DateCategory {
+    color: #000;
+    display: flex;
+    margin-bottom: 2rem;
+
+    &Icon,
+    p,
+    &Chip {
+      margin-top: 1rem;
+      margin-right: 1rem;
+      height: 100%;
+    }
+
+    &Icon {
+      font-size: 1.5rem;
+    }
+
+    &Chip {
+      all: unset;
+      background-color: #f0f2e9;
+      color: base.$primary-color;
+      padding: 0.25rem 1rem;
+      margin-top: 0.75rem;
+      border-radius: 4px;
+      height: fit-content;
+      cursor: pointer;
+    }
+  }
+
+  &PostImageContainer {
     width: 100%;
     height: 100%;
+    margin-bottom: 2rem;
+
+    .detailsPostImage {
+      width: 100%;
+    }
+  }
+
+  &Main {
     display: flex;
-  }
+    justify-content: space-between;
 
-  .busbtn {
-    height: 100%;
-  }
+    &Content {
+      width: 60%;
 
-  .detailsh1 {
-    font-size: 2rem;
-    font-weight: 800;
-  }
+      &Title {
+        margin-bottom: 1rem;
+      }
+    }
 
-  .image {
-    width: 80%;
-    height: 100%;
-  }
-  .icon {
-    width: 3%;
-    height: 100%;
-  }
-  .container {
-    // justify-content: left;
-    // width: 30%;
-    height: 100%;
-    margin-left: 350px;
-    margin-right: 15rem;
-    // padding-right: 100px;
-    text-align: left;
-    font-size: normal;
-    font-weight: 400;
+    &Author {
+      display: flex;
+
+      &Avatar {
+        @extend %profilePictureContainer;
+        margin-right: 1rem;
+
+        img {
+          @extend %profilePicture;
+        }
+      }
+
+      &Info {
+        p:last-child {
+          font-weight: 700;
+        }
+
+        .detailsShareButton {
+          // all: unset;
+          font-size: 1rem;
+        //   display: block;
+          background-color: base.$white-color;
+          color: base.$primary-color;
+          padding: 0.5rem;
+          width: 7.5rem;
+          border-inline-color: base.$primary-color;
+          border-radius: 10px;
+          //   position: absolute;
+          //   right: 4rem;
+            margin-top: 2rem;
+            text-align: center;
+            cursor: pointer;
+        }
+        .detailsShareIcon {
+          font-size: 1.05rem;
+          margin-right: 1rem;
+        }
+        .detailsSaveIcon {
+          font-size: 1.05rem;
+          margin-right: 1rem;
+        }
+        
+        .detailsSaveButton {
+          // all: unset;
+          font-size: 1rem;
+          // display: block;
+          background-color: base.$primary-color;
+          color: base.$white-color;
+          padding: 0.5rem;
+          width: 7.5rem;
+          border-inline-color: base.$primary-color;
+          border-radius: 10px;
+        //   position: absolute;
+        //   right: 4rem;
+          margin-left: 1.7rem;
+          text-align: center;
+          cursor: pointer;
+        }
+      }
+    }
   }
 }

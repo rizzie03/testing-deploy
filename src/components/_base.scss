@@ -1,3 +1,5 @@
+@import "../breakpoints/breakpoints.scss";
+
 $primary-color: #214457;
 $white-color: #ffffff;
 $menu-color: #e3e3e3;
@@ -26,6 +28,11 @@ $secondary-color: #f2d555;
   height: 2.5rem;
   border-radius: 50%;
   overflow: hidden;
+
+  @include media("<=tablet") {
+    width: 2.5rem;
+    height: 2.25rem;
+  }
 }
 
 %profilePicture {

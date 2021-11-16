@@ -31,14 +31,14 @@ function Header() {
           <img src={Logo} alt="Logo" className={headerstyle.logo} />
         </Link>
         <div
-          className={headerstyle.navSearchContainer}
-          style={
-            location.pathname === "/" ||
-            location.pathname === "/signup" ||
-            location.pathname === "/signin"
-              ? { visibility: "hidden" }
-              : { visibility: "visible" }
-          }
+          className={`${headerstyle.navSearchContainer} ${`
+            ${
+              location.pathname === "/" ||
+              location.pathname === "/signup" ||
+              location.pathname === "/signin"
+                ? headerstyle.navSearchContainernotShow
+                : headerstyle.navSearchContainershow
+            }`}`}
         >
           <div className={headerstyle.navSearch}>
             <BsSearch className={headerstyle.navSearchIcon} />

@@ -20,7 +20,6 @@ function App() {
         <Route exact path="/signup" element={<SignUp />} />
         <Route exact path="/signin" element={<SignIn />} />
         <Route exact path="/posts" element={<Posts />} />
-        {/* <Route exact path="/comments/user" element={<CommentsUser />} /> */}
         <Route exact path="/events" element={<Events />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

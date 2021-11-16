@@ -20,11 +20,9 @@ function Home() {
       <section className={HomeStyle.homeTop}>
         <h1 className={HomeStyle.homeHeader}>
           <span className={HomeStyle.homeHeaderSecondary}>Create</span> or
-          <span className={HomeStyle.homeHeaderSecondary}> Find </span> <br />
-          interesting <br />
-          <span className={HomeStyle.homeHeaderSecondary}>
-            Events
-          </span> around <br />
+          <span className={HomeStyle.homeHeaderSecondary}> Find </span>
+          interesting
+          <span className={HomeStyle.homeHeaderSecondary}> Events</span> around
           The world
         </h1>
         <div className={HomeStyle.homeSearch}>

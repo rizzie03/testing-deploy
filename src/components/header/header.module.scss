@@ -21,8 +21,13 @@
 
   .logo {
     width: 14.25rem;
+
     @include media("<=tablet") {
-      width: 10rem;
+      width: 8.5rem;
+    }
+    @include media("<=phone") {
+      width: 8rem;
+      margin-top: 0.5rem;
     }
   }
 
@@ -90,9 +95,23 @@
     line-height: 3rem;
     margin: 0 1rem;
     font-size: 1.25rem;
+    transition: all 0.3s;
 
     &:visited {
       text-decoration: none;
+    }
+
+    &:hover {
+      color: base.$secondary-color;
+    }
+
+    @include media("<=tablet") {
+      font-size: 1rem;
+    }
+
+    @include media("<=phone") {
+      font-size: 0.85rem;
+      margin: 0 0.5rem;
     }
   }
 

@@ -81,7 +81,7 @@
     padding: 0;
     list-style: none;
     display: flex;
-    display: none;
+    // display: none;
   }
 
   .link {
@@ -102,6 +102,7 @@
     // display: none;
     width: 12.6rem;
     cursor: pointer;
+    display: none;
 
     @include media("<=tablet") {
       width: 8rem;

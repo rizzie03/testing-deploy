@@ -1,4 +1,5 @@
 @use "../../components/base";
+@import "../../breakpoints/breakpoints.scss";
 
 .homeTop {
   background-image: linear-gradient(
@@ -13,6 +14,17 @@
   justify-content: space-around;
   padding: 7rem;
 
+  @include media("<=desktop") {
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100vh;
+  }
+
+  @include media("<=tablet") {
+    height: 50vh;
+    padding: 4rem;
+  }
+
   .homeHeader {
     font-size: 3rem;
     color: base.$white-color;
@@ -21,6 +33,16 @@
 
     &Secondary {
       color: base.$secondary-color;
+    }
+
+    @include media("<=desktop") {
+      width: 60%;
+      flex: 0;
+      text-align: center;
+    }
+
+    @include media("<=tablet") {
+      font-size: 1.5rem;
     }
   }
 
@@ -31,16 +53,33 @@
     height: 3rem;
     position: relative;
 
+    @include media("<=desktop") {
+      all: unset;
+      height: 2rem;
+      width: 50%;
+      background-color: base.$menu-color;
+      border-radius: 50px;
+      position: relative;
+    }
+
+    @include media("<=tablet") {
+      width: 15rem;
+    }
+
     &Icon {
       margin-left: 1.5rem;
       height: 3rem;
+
+      @include media("<=desktop") {
+        display: none;
+      }
     }
 
     &Input {
       background-color: base.$menu-color;
       outline: none;
       border: none;
-      width: 75%;
+      // width: 75%;
       position: absolute;
       margin-left: 1rem;
       line-height: 3rem;
@@ -50,6 +89,19 @@
 
       &::placeholder {
         font-size: 1rem;
+      }
+
+      @include media("<=desktop") {
+        line-height: 2rem;
+        border-radius: 50px;
+        width: 100%;
+        margin-left: 0;
+        padding: 0 1rem;
+        left: -3rem;
+      }
+
+      @include media("<=tablet") {
+        left: 0;
       }
     }
 
@@ -67,7 +119,24 @@
       height: 50%;
       text-align: center;
       top: calc(25% - 0.35rem);
-      transition: all 0.5s;
+      transition: opacity 0.5s;
+
+      @include media("<=desktop") {
+        width: fit-content;
+        // top: calc(100% + 1rem);
+        // left: calc(50% - 2.5rem);
+        right: calc(0% - 6rem);
+        height: 1.3rem;
+        line-height: 0.7rem;
+        border-radius: 50px;
+        background-color: base.$secondary-color;
+        color: base.$primary-color;
+      }
+
+      @include media("<=tablet") {
+        top: calc(100% + 1rem);
+        left: calc(50% - 2.5rem);
+      }
 
       &:hover {
         // background-color: base.$secondary-color;
@@ -87,6 +156,10 @@
     justify-content: space-between;
     margin-bottom: 5rem;
 
+    @include media("<=tablet") {
+      flex-direction: column;
+    }
+
     &Title {
       font-size: 2.25rem;
       font-weight: 1200;
@@ -96,6 +169,11 @@
       color: base.$link-color;
       text-decoration: none;
       font-weight: 700;
+      transition: color 300ms;
+
+      &:hover {
+        color: base.$secondary-color;
+      }
     }
   }
 
@@ -105,5 +183,9 @@
     justify-content: space-between;
     width: 100%;
     margin-bottom: 5rem;
+
+    @include media("<=tablet") {
+      flex-wrap: wrap;
+    }
   }
 }

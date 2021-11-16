@@ -1,6 +1,11 @@
 @use "../../components/base";
 @import "../../breakpoints/breakpoints.scss";
 
+@include media ("<=LGdesktop") {
+  
+}
+
+
 .post {
   padding: 10rem 14rem;
   position: relative;

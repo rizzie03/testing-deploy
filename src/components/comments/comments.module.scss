@@ -10,6 +10,7 @@
 
     &PP {
       @extend %profilePictureContainer;
+      overflow: hidden;
 
       img {
         @extend %profilePicture;

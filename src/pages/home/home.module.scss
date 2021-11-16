@@ -55,7 +55,7 @@
 
     @include media("<=desktop") {
       all: unset;
-      height: 2rem;
+      height: 2.5rem;
       width: 50%;
       background-color: base.$menu-color;
       border-radius: 50px;
@@ -92,7 +92,7 @@
       }
 
       @include media("<=desktop") {
-        line-height: 2rem;
+        line-height: 2.5rem;
         border-radius: 50px;
         width: 100%;
         margin-left: 0;
@@ -123,11 +123,11 @@
 
       @include media("<=desktop") {
         width: fit-content;
-        // top: calc(100% + 1rem);
+        top: calc(100% - 2.4rem);
         // left: calc(50% - 2.5rem);
         right: calc(0% - 6rem);
-        height: 1.3rem;
-        line-height: 0.7rem;
+        height: 1.7rem;
+        line-height: 0.3rem;
         border-radius: 50px;
         background-color: base.$secondary-color;
         color: base.$primary-color;

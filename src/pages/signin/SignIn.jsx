@@ -4,7 +4,6 @@ import { FiEyeOff, FiEye } from "react-icons/fi";
 
 function SignIn() {
   const [showPass, setShowPass] = useState(false);
-  const [showCPass, setShowCPass] = useState(false);
 
   return (
     <div className={SignInStyle.signinContainer}>
@@ -22,19 +21,19 @@ function SignIn() {
         <div className={SignInStyle.signinPasswordContainer}>
           <input
             className={SignInStyle.signinInputPassword}
-            type={showCPass ? "text" : "password"}
+            type={showPass ? "text" : "password"}
             placeholder="Password"
             //onChange={(e) => setName(e.target.value)}
           />
-          {showCPass ? (
+          {showPass ? (
             <FiEye
               className={SignInStyle.eyeIcon}
-              onClick={() => setShowCPass(!showCPass)}
+              onClick={() => setShowPass(!showPass)}
             />
           ) : (
             <FiEyeOff
               className={SignInStyle.eyeIcon}
-              onClick={() => setShowCPass(!showCPass)}
+              onClick={() => setShowPass(!showPass)}
             />
           )}
         </div>

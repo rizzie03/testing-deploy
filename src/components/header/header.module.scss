@@ -1,14 +1,84 @@
 @use "../base";
+@import "../../breakpoints/breakpoints.scss";
 
 .navbar {
   background-color: base.$primary-color;
-  padding: 2rem 7rem;
+  padding: 1.25rem 7rem;
   display: flex;
+  width: 100%;
+  z-index: 50;
   justify-content: space-between;
-  position: sticky;
+  position: fixed;
+
+  @include media("<=tablet") {
+    align-items: center;
+    padding: 1rem 3.5rem;
+  }
+
+  @include media("<=phone") {
+    padding: 1rem;
+  }
 
   .logo {
     width: 14.25rem;
+
+    @include media("<=tablet") {
+      width: 8.5rem;
+    }
+    @include media("<=phone") {
+      width: 8rem;
+      margin-top: 0.5rem;
+    }
+  }
+
+  .navSearchContainer {
+    flex: 1;
+    margin-left: 2rem;
+    margin-top: 0.25rem;
+
+    @include media("<=desktop") {
+      display: none;
+    }
+
+    &show {
+      visibility: visible;
+    }
+
+    &notShow {
+      visibility: hidden;
+    }
+
+    .navSearch {
+      background-color: base.$menu-color;
+      border-radius: 99px;
+      width: 50%;
+      justify-self: left;
+      height: 2.5rem;
+      position: relative;
+      justify-self: inline-start;
+
+      &Icon {
+        margin-left: 1.5rem;
+        height: 2.5rem;
+      }
+
+      &Input {
+        background-color: base.$menu-color;
+        outline: none;
+        border: none;
+        width: 85%;
+        position: absolute;
+        margin-left: 1rem;
+        line-height: 2.5rem;
+        font-size: 1rem;
+        font-family: inherit;
+        border-radius: 0 99px 99px 0;
+
+        &::placeholder {
+          font-size: 1rem;
+        }
+      }
+    }
   }
 
   .navContainer {
@@ -16,6 +86,7 @@
     padding: 0;
     list-style: none;
     display: flex;
+    // display: none;
   }
 
   .link {
@@ -24,9 +95,63 @@
     line-height: 3rem;
     margin: 0 1rem;
     font-size: 1.25rem;
+    transition: all 0.3s;
 
     &:visited {
       text-decoration: none;
+    }
+
+    &:hover {
+      color: base.$secondary-color;
+    }
+
+    @include media("<=tablet") {
+      font-size: 1rem;
+    }
+
+    @include media("<=phone") {
+      font-size: 0.85rem;
+      margin: 0 0.5rem;
+    }
+  }
+
+  .user {
+    display: flex;
+    justify-content: space-around;
+    // display: none;
+    width: 12.6rem;
+    cursor: pointer;
+    display: none;
+
+    @include media("<=tablet") {
+      width: 8rem;
+    }
+
+    .userPP {
+      @extend %profilePictureContainer;
+      margin-top: 0.375rem;
+      position: relative;
+
+      img {
+        @extend %profilePicture;
+      }
+    }
+
+    p {
+      color: base.$white-color;
+      font-weight: 700;
+      font-size: 1.15rem;
+      line-height: 3rem;
+
+      @include media("<=tablet") {
+        font-size: 0.75rem;
+        margin-left: 0.5rem;
+      }
+
+      @include media("<=phone") {
+        display: none;
+      }
+      // margin-left: 2rem;
     }
   }
 }

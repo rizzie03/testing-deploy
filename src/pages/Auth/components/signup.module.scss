@@ -1,4 +1,5 @@
-@use "../../components/base";
+@use "../../../components/base";
+@import "../../../breakpoints/breakpoints.scss";
 
 .signupContainer {
   display: flex;
@@ -7,10 +8,29 @@
   align-items: center;
   height: 115vh;
 
+  @include media("<=desktop") {
+    height: 150vh;
+  }
+
+  @include media("<=tablet") {
+    height: 100vh;
+  }
+
+  @include media("<=phone") {
+    height: 100vh;
+  }
+
   .signupHeader {
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
+
+    @include media("<=phone") {
+      // margin-bottom: 0;
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      margin-top: 5rem;
+    }
   }
   .signupInputError {
     @extend %inputbuttonStyle;
@@ -18,12 +38,25 @@
     border: 1px solid base.$error-color;
     display: block;
     margin: 1rem 0 0;
+
+    @include media("<=phone") {
+      height: 2rem;
+      border: 1px solid base.$error-color;
+      width: 17rem;
+      margin: auto;
+      margin-top: 0.5rem;
+      margin-bottom: -0.5rem;
+    }
   }
 
   .signupSpanError {
     color: base.$error-color;
     font-size: 0.7rem;
     padding-left: 1rem;
+    @include media("<=phone") {
+      padding-left: 1rem;
+      font-size: 0.5rem;
+    }
   }
 
   .signupPasswordContainerError {
@@ -37,8 +70,26 @@
     border: 1px solid base.$error-color;
     margin: 1rem 0 0;
 
+    @include media("<=phone") {
+      //height: 2rem;
+      border: 1px solid base.$error-color;
+      width: 17rem;
+      margin: auto;
+      padding: 0;
+      margin-top: 0.5rem;
+      margin-bottom: -0.5rem;
+
+      // margin: 10rem 0 0;
+    }
+
     .signupInputPassword {
       @extend %inputpasswordStyle;
+      @include media("<=phone") {
+        height: 2rem;
+        padding-left: 0.75rem;
+        border-radius: 99px;
+        font-size: 0.75rem;
+      }
     }
 
     .eyeIcon {
@@ -46,6 +97,10 @@
       top: calc(50% - 7.335px);
       right: 1rem;
       cursor: pointer;
+      @include media("<=phone") {
+        font-size: 0.75rem;
+        margin-top: 0.1rem;
+      }
     }
   }
 
@@ -53,7 +108,7 @@
     @extend %inputbuttonStyle;
     outline: #999;
     border: 1px solid #999;
-    //display: block;
+    display: block;
 
     &:focus {
       outline: black;
@@ -80,6 +135,16 @@
     cursor: pointer;
     height: 3.5rem;
     display: block;
+
+    @include media("<=phone") {
+      height: 2rem;
+
+      width: 17rem;
+      margin: auto;
+      font-size: 0.75rem;
+      margin-top: 0.5rem;
+      margin-bottom: -0.5rem;
+    }
   }
 
   .signupPasswordContainer {
@@ -106,5 +171,11 @@
     color: base.$link-color;
     font-weight: 700;
     font-size: 1rem;
+    @include media("<=phone") {
+      padding-left: 1rem;
+      font-size: 0.5rem;
+      margin-top: 0.5rem;
+      margin-bottom: -0.5rem;
+    }
   }
 }

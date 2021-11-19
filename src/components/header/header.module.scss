@@ -121,7 +121,7 @@
     // display: none;
     width: 12.6rem;
     cursor: pointer;
-    display: none;
+    // display: none;
 
     @include media("<=tablet") {
       width: 8rem;
@@ -137,11 +137,12 @@
       }
     }
 
-    p {
+    a {
       color: base.$white-color;
       font-weight: 700;
       font-size: 1.15rem;
       line-height: 3rem;
+      text-decoration: none;
 
       @include media("<=tablet") {
         font-size: 0.75rem;

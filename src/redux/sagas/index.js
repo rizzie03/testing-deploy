@@ -1,7 +1,7 @@
 import { all } from "redux-saga/effects";
 
 function* rootSaga() {
-  yield all["semua watchers"];
+  yield all([watchGetComments]);
 }
 
 export default rootSaga;

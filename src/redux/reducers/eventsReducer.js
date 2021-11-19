@@ -1,11 +1,9 @@
 import {
-    GET_MOVIES_BEGIN,
-    GET_MOVIES_SUCCESS,
-    GET_MOVIES_FAIL,
-    GET_MOVIE_DETAIL_BEGIN,
-    GET_MOVIE_DETAIL_SUCCESS,
-    GET_MOVIE_DETAIL_FAIL,
+    GET_COMMENTS_BEGIN,
+    GET_COMMENTS_SUCCESS,
+    GET_COMMENTS_FAIL,
   } from "../actions/types";
+  import React from 'react'
   
   const initialState = {
     movies: [],
@@ -18,61 +16,42 @@ import {
     },
   };
   
-  const movie = (state = initialState, action) => {
+  const comments = (state = initialState, action) => {
     const { type, payload, error } = action;
     switch (type) {
       default:
         return {
           ...state,
         };
-      case GET_MOVIES_BEGIN:
+      case GET_COMMENTS_BEGIN:
         return {
           ...state,
           loading: true,
           error: null,
         };
-      case GET_MOVIES_SUCCESS:
+      case GET_COMMENTS_SUCCESS:
         return {
           ...state,
           loading: false,
           error: null,
           movies: payload,
         };
-      case GET_MOVIES_FAIL:
+      case GET_COMMENTS_FAIL:
         return {
           ...state,
           loading: false,
           error: error,
           movies: [],
         };
-      case GET_MOVIE_DETAIL_BEGIN:
-        return {
-          ...state,
-          detailMovie: {
-            loading: true,
-            error: null,
-          },
-        };
-      case GET_MOVIE_DETAIL_SUCCESS:
-        return {
-          ...state,
-          detailMovie: {
-            loading: false,
-            error: null,
-            details: payload,
-          },
-        };
-      case GET_MOVIE_DETAIL_FAIL:
-        return {
-          ...state,
-          detailMovie: {
-            loading: false,
-            error: error,
-            details: [],
-          },
-        };
-    }
-  };
-  
   export default movie;
+  
+  
+  
+  export default function eventsReducer() {
+    return (
+      <div>
+        
+      </div>
+    )
+  }
   

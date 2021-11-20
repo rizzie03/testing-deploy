@@ -67,16 +67,14 @@ export default function Details() {
           <div className={detailstyle.detailsMainAuthorInfo}>
             <p>Created by</p>
             <p>Pratur Anahata Pratama</p>
-            {/* <div className={detailstyle.detailsLeButtons}>
-              <button className={detailstyle.detailsShareButton}>
-                <FiShare2 className={detailstyle.detailsShareIcon} />
-                Share
-              </button>
-              <button className={detailstyle.detailsSaveButton}>
-                <FiBookmark className={detailstyle.detailsSaveIcon} />
-                Save
-              </button>
-            </div> */}
+            {/* <button className={detailstyle.detailsShareButton}>
+              <FiShare2 className={detailstyle.detailsShareIcon} />
+              Share
+            </button>
+            <button className={detailstyle.detailsSaveButton}>
+              <FiBookmark className={detailstyle.detailsSaveIcon} />
+              Save
+            </button> */}
           </div>
         </div>
       </div>

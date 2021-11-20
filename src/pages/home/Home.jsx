@@ -28,8 +28,8 @@ function Home() {
         <div className={HomeStyle.homeSearch}>
           <BsSearch className={HomeStyle.homeSearchIcon} />
           <input
-            type="text"
-            placeholder="Search events"
+            type='text'
+            placeholder='Search events'
             className={HomeStyle.homeSearchInput}
           />
           <button className={HomeStyle.homeSearchButton}>Search</button>
@@ -40,7 +40,7 @@ function Home() {
           <h2 className={HomeStyle.homeBottomHeaderTitle}>
             Attend an event starting soon
           </h2>
-          <Link to="/events" className={HomeStyle.homeBottomHeaderLink}>
+          <Link to='/events' className={HomeStyle.homeBottomHeaderLink}>
             More events
           </Link>
         </div>
@@ -49,12 +49,14 @@ function Home() {
         </div>
         <div className={HomeStyle.homeBottomHeader}>
           <h2 className={HomeStyle.homeBottomHeaderTitle}>Design events</h2>
-          <Link to="/events" className={HomeStyle.homeBottomHeaderLink}>
+          <Link to='/events' className={HomeStyle.homeBottomHeaderLink}>
             More events
           </Link>
         </div>
         <div className={HomeStyle.cards}>
-          {events.length > 0 && events.map((data) => <Card data={data} />)}
+          <Link to={`/posts/${id}`}>
+            {events.length > 0 && events.map((data) => <Card data={data} />)}
+          </Link>
         </div>
       </section>
     </>

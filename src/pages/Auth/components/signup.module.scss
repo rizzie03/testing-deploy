@@ -67,12 +67,12 @@
     top: 0;
     left: 0;
     width: 35rem;
-    border: 1px solid base.$error-color;
+    // border: 1px solid base.$error-color;
     margin: 1rem 0 0;
 
     @include media("<=phone") {
       //height: 2rem;
-      border: 1px solid base.$error-color;
+      // border: 1px solid base.$error-color;
       width: 17rem;
       margin: auto;
       padding: 0;
@@ -109,6 +109,11 @@
     outline: #999;
     border: 1px solid #999;
     display: block;
+    @include media("<=phone") {
+      font-size: 0.75rem;
+      margin-top: 0.1rem;
+      width: 17rem;
+    }
 
     &:focus {
       outline: black;

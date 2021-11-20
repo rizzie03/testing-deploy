@@ -6,14 +6,14 @@
 # See https://docs.gitlab.com/ee/ci/variables/#cicd-variable-precedence
 stages:
   - production
-prodaction:
-  stage: prodaction
+production:
+  stage: production
   script:
     - apt-get update -qy
     - apt-get install -y ruby-dev
     - gen install dpl
-    - dpl --provider=heroku --app=${HEROKU_API}
+    - dpl --provider=heroku --app=${REPO_NAME} --api-key=${HEROKU_API}
   only:
     - develop
-  tages:
+  tags:
     - "docker"

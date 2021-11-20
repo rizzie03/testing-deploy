@@ -3,7 +3,7 @@ import { watchLogin, watchRegister } from "./authSaga";
 
 
 function* rootSaga() {
-  yield all(["semua watchers", watchLogin(), watchRegister()]);
+  yield all([watchLogin(), watchRegister()]);
 }
 
 export default rootSaga;

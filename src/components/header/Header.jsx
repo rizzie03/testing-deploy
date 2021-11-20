@@ -16,7 +16,8 @@ function Header() {
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
   }, [offsetY]);
-
+  const token = localStorage.getItem("token");
+ 
   return (
     <>
       <nav
@@ -34,8 +35,8 @@ function Header() {
           className={`${headerstyle.navSearchContainer} ${`
             ${
               location.pathname === "/" ||
-              location.pathname === "/signup" ||
-              location.pathname === "/signin"
+              location.pathname === "/auth/register" ||
+              location.pathname === "/auth/login"
                 ? headerstyle.navSearchContainernotShow
                 : headerstyle.navSearchContainershow
             }`}`}
@@ -49,24 +50,29 @@ function Header() {
             />
           </div>
         </div>
-        <ul className={headerstyle.navContainer}>
-          <li>
-            <Link to="/signup" className={headerstyle.link}>
-              Sign Up
-            </Link>
-          </li>
-          <li>
-            <Link to="/signin" className={headerstyle.link}>
-              Sign In
-            </Link>
-          </li>
-        </ul>
-        <div className={headerstyle.user}>
-          <div className={headerstyle.userPP}>
-            <img src={UserPP} alt="Your Profile Picture" />
+        {!token ? (
+          <>
+            <ul className={headerstyle.navContainer}>
+              <li>
+                <Link to="/auth/register" className={headerstyle.link}>
+                  Sign Up
+                </Link>
+              </li>
+              <li>
+                <Link to="/auth/login" className={headerstyle.link}>
+                  Sign In
+                </Link>
+              </li>
+            </ul>
+          </>
+        ) : (
+          <div className={headerstyle.user}>
+            <div className={headerstyle.userPP}>
+              <img src={UserPP} alt="Your Profile Picture" />
+            </div>
+          <Link to='/account'>My Account</Link>
           </div>
-          <p>My Account</p>
-        </div>
+        )}
       </nav>
     </>
   );

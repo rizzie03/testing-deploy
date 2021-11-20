@@ -3,6 +3,10 @@ import AvatarStyle from "./account.module.scss";
 import { FiLogOut } from "react-icons/fi";
 
 function Account() {
+  const logout = () => {
+    localStorage.clear();
+    window.location.href = "/";
+  };
   return (
     <div className={AvatarStyle.accountContainer}>
       <div className={AvatarStyle.avatarContainer}>
@@ -11,7 +15,7 @@ function Account() {
       <p className={AvatarStyle.accountName}>Pratur Anahata Pratama</p>
       <p className={AvatarStyle.accountEmail}>praturanhata45@gmail.com</p>
 
-      <button className={AvatarStyle.accountButton}>
+      <button onClick={logout} className={AvatarStyle.accountButton}>
         <FiLogOut className={AvatarStyle.accountIcon} />
         Sign Out
       </button>

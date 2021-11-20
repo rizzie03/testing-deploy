@@ -1,0 +1,134 @@
+@use "../../../components/base";
+@import "../../../breakpoints/breakpoints.scss";
+
+.signinContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  @include media("<=desktop") {
+    height: 100vh;
+  }
+
+  @include media("<=tablet") {
+    height: 100vh;
+  }
+
+  @include media("<=phone") {
+    height: 100vh;
+  }
+
+  .signinSpanError {
+    color: base.$error-color;
+    padding-bottom: 2.5rem;
+
+    @include media("<=phone") {
+      font-size: 0.75rem;
+    }
+  }
+
+  .signinHeader {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+
+    @include media("<=phone") {
+      // margin-bottom: 0;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      // margin-top: 5rem;
+    }
+  }
+
+  .signinInput {
+    @extend %inputbuttonStyle;
+    outline: #999;
+    border: 1px solid #999;
+    @include media("<=phone") {
+      // margin-bottom: 0;
+      font-size: 1rem;
+      border-radius: 2rem;
+      width: 18rem;
+    }
+
+    &:nth-of-type(1) {
+      margin-top: 1.5rem;
+    }
+
+    &:focus {
+      outline: black;
+      border: 1px solid black;
+    }
+
+    &::placeholder {
+      font-size: 1rem;
+    }
+  }
+
+  .signinButton {
+    @extend %inputbuttonStyle;
+    background-color: base.$primary-color;
+    color: base.$white-color;
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding: 0.5rem;
+    border: none;
+    cursor: pointer;
+    height: 3.5rem;
+
+    @include media("<=phone") {
+      // margin-bottom: 0;
+
+      border-radius: 2rem;
+      width: 18rem;
+    }
+  }
+
+  .signinPasswordContainer {
+    @extend %inputbuttonStyle;
+    display: block;
+    text-align: left;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 35rem;
+    border: 1px solid #999;
+    margin: 0 0 0.25rem;
+    @include media("<=phone") {
+      font-size: 0.75rem;
+
+      width: 100%;
+
+      padding: 1rem;
+      //margin: 0.75rem 0;
+      border-radius: 2rem;
+    }
+
+    .signinInputPassword {
+      width: 65%;
+      outline: none;
+      border: none;
+      display: block;
+      font-size: 1rem;
+      @include media("<=phone") {
+        font-size: 0.75rem;
+        width: 65%;
+      }
+    }
+
+    .eyeIcon {
+      position: absolute;
+      top: calc(50% - 7.335px);
+      right: 1rem;
+      cursor: pointer;
+    }
+  }
+
+  .signinText {
+    color: base.$link-color;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+}

@@ -1,15 +1,5 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
-import SignUp from "./pages/signup/SignUp";
-import SignIn from "./pages/signin/SignIn";
-import Posts from "./pages/posts/Posts";
-// import CommentsUser from "./pages/comments/CommentsUser";
-
-import Headers from "./components/header/Header";
-import Footer from "./components/footer/Footer";
-import Home from "./pages/home/Home";
-import Events from "./pages/events/Events";
-import NotFound from "./pages/notfound/NotFound";
+import createRoutes from "./routes/routes";
 
 function App() {
   return (

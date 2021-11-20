@@ -1,16 +1,36 @@
+@import "../breakpoints/breakpoints.scss";
+
 $primary-color: #214457;
 $white-color: #ffffff;
 $menu-color: #e3e3e3;
 $icon-color: #dadada;
 $info-color: #f8f8f8;
 $link-color: #3e89ae;
+$error-color: #d74545;
 $secondary-color: #f2d555;
 
 %inputbuttonStyle {
   width: 35rem;
   padding: 1rem;
+  margin: 1.25rem 0;
+  border-radius: 10px;
+}
+
+%inputpasswordStyle {
+  width: 65%;
+  outline: none;
+  border: none;
+  display: block;
+  font-size: 1rem;
+}
+
+%eyeiconStyle {
+  position: absolute;
+  top: calc(50% - 7.335px);
+  right: 1rem;
   margin: 0.75rem 0;
   border-radius: 10px;
+  font-size: 1rem;
 }
 
 %selectOptionStyle {
@@ -26,6 +46,11 @@ $secondary-color: #f2d555;
   height: 2.5rem;
   border-radius: 50%;
   overflow: hidden;
+
+  @include media("<=tablet") {
+    width: 2.5rem;
+    height: 2.25rem;
+  }
 }
 
 %profilePicture {

@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getEventsCatFetch } from "../../redux/action/actions/categories";
 import { getEventsFetch } from "../../redux/action/actions/events";
 
-function Filter({ page }) {
+function Filter({ handleSetFilterDate, handleFilterCategory, handleSort }) {
   const [show, setShow] = useState(false);
   const [showCat, setShowCat] = useState(false);
   const [showSort, setShowSort] = useState(false);
@@ -39,21 +39,19 @@ function Filter({ page }) {
   };
 
   const handleChosen = (data, value) => {
-    console.log(value);
-    page = 1;
-    dispatch(getEventsFetch({ slug: `?${value}=1&page=${page}&limit=8` }));
+    handleSetFilterDate(value);
     setChosen(data);
     setShow(!show);
   };
 
   const handleChosenCat = (data, id) => {
-    page = 1;
-    dispatch(getEventsFetch({ slug: `?cat=${id}&page=${page}&limit=8` }));
+    handleFilterCategory(id);
     setChosenCat(data);
     setShowCat(!showCat);
   };
 
-  const handleChosenSort = (data) => {
+  const handleChosenSort = (data, value) => {
+    handleSort(value);
     setChosenSort(data);
     setShowSort(!showSort);
   };
@@ -161,7 +159,7 @@ function Filter({ page }) {
               style={
                 showSort === false ? { display: "none" } : { display: "block" }
               }
-              onClick={() => handleChosenSort(`${data.name}`)}
+              onClick={() => handleChosenSort(`${data.name}`, `${data.value}`)}
             >
               <input
                 type="radio"

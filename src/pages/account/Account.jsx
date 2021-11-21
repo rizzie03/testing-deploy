@@ -10,7 +10,7 @@ function Account() {
   return (
     <div className={AvatarStyle.accountContainer}>
       <div className={AvatarStyle.avatarContainer}>
-        <img src={Avatar} alt="my profile picture" />
+        <img src={Avatar} alt="my profile pic" />
       </div>
       <p className={AvatarStyle.accountName}>Pratur Anahata Pratama</p>
       <p className={AvatarStyle.accountEmail}>praturanhata45@gmail.com</p>

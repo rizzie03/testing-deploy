@@ -9,7 +9,9 @@ function Footer() {
   return (
     <footer className={footerstyle.footer}>
       <div className={footerstyle.footerCol1}>
-        <img src={LogoFooter} alt="logo" />
+        <Link to="/">
+          <img src={LogoFooter} alt="logo" className={footerstyle.footerLogo} />
+        </Link>
         <p className={footerstyle.textInfo}>
           SeeEvent is a platform where you can create or find an amazing events
           around the world.

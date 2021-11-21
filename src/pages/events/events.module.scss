@@ -1,7 +1,13 @@
+@import "../../breakpoints/breakpoints.scss";
+
 .eventContainer {
   padding: 9rem 7rem 7rem;
   justify-content: center;
   position: relative;
+
+  @include media("<=phone") {
+    padding: 9rem 2rem 4rem;
+  }
 
   .results {
     font-weight: 700;
@@ -18,10 +24,9 @@
   .cards {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: left;
     width: 100%;
-    margin-top: 7rem;
-    margin-bottom: 5rem;
+    margin: 7rem auto 5rem;
     flex-wrap: wrap;
   }
 }

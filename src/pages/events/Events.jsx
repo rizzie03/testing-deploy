@@ -26,7 +26,7 @@ function Events() {
           </div>
           <PaginationRounded className={EventsStyle.pagination} />
         </div>
-        {/* <NoResult /> */}
+        <NoResult />
       </div>
     </>
   );

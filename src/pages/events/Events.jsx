@@ -6,25 +6,54 @@ import PaginationRounded from "../../components/pagination/Pagination";
 import EventsStyle from "./events.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { getEventsFetch } from "../../redux/action/actions/events";
-import { useParams } from "react-router";
+import { useLocation } from "react-router";
 
 function Events() {
   const events = useSelector((state) => state.events);
   const dispatch = useDispatch();
   const [page, setPage] = useState(1);
   const [limit, setLimit] = useState(8);
+  const [searchInput, setSearchInput] = useState("");
+  const [filterDate, setFilterDate] = useState("");
+  const [filterCategory, setFilterCategory] = useState("");
+  const [sort, setSort] = useState("");
+  const { state } = useLocation();
+
+  const fetchEvents = () => {
+    dispatch(
+      getEventsFetch({
+        slug: `?search=${searchInput}${
+          filterDate ? `&${filterDate}=1` : ""
+        }&cat=${filterCategory}${
+          sort ? `&${sort}=asc` : ""
+        }&page=${page}&limit=${limit}`,
+      })
+    );
+  };
 
   useEffect(() => {
-    window.scroll(0, 0);
-    dispatch(getEventsFetch({ slug: "?page=1&limit=8" }));
+    setSearchInput(state);
   }, []);
 
   useEffect(() => {
-    dispatch(getEventsFetch({ slug: `?page=${page}&limit=8` }));
-  }, [page]);
+    window.scroll(0, 0);
+    fetchEvents();
+  }, [page, filterDate, filterCategory, sort, searchInput]);
 
   const handleClickPage = (event, value) => {
     setPage(value);
+  };
+
+  const handleSetFilterDate = (value) => {
+    setFilterDate(value);
+  };
+
+  const handleFilterCategory = (value) => {
+    setFilterCategory(value);
+  };
+
+  const handleSort = (value) => {
+    setSort(value);
   };
 
   return (
@@ -33,8 +62,13 @@ function Events() {
         <p className={EventsStyle.results}>
           Showing {events.totalData ? events.totalData : 0} Results for “How to”
         </p>
-        <Filter page={page} />
-        {events.data.length !== 0 ? (
+        <Filter
+          page={page}
+          handleSetFilterDate={handleSetFilterDate}
+          handleFilterCategory={handleFilterCategory}
+          handleSort={handleSort}
+        />
+        {events.data ? (
           <div>
             <div className={EventsStyle.cards}>
               {events.data.length > 0 &&

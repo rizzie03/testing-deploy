@@ -18,8 +18,8 @@ const options = {
     "Music",
   ],
   sortingBy: [
-    { name: "Date", value: "" },
-    { name: "Name", value: "" },
+    { name: "Date", value: "orderbydate" },
+    { name: "Name", value: "orderbytitle" },
   ],
 };
 

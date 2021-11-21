@@ -9,12 +9,16 @@
   display: flex;
   justify-content: space-between;
 
+  &Logo {
+    cursor: pointer;
+  }
+
   a {
     all: unset;
   }
 
   @include media("<=desktop") {
-    padding: 2rem 5rem;
+    padding: 2rem 3rem;
   }
 
   &Col1 {
@@ -25,13 +29,16 @@
     }
 
     @include media("<=desktop") {
-      width: 100%;
-      justify-content: center;
-      text-align: center;
+      width: 25%;
 
       img {
         width: 12rem;
       }
+    }
+
+    @include media("<=tablet") {
+      width: 100%;
+      text-align: center;
     }
 
     @include media("<=phone") {
@@ -48,6 +55,10 @@
     }
 
     @include media("<=desktop") {
+      width: 15%;
+    }
+
+    @include media("<=tablet") {
       display: none;
     }
   }
@@ -59,10 +70,10 @@
     justify-content: space-between;
 
     @include media("<=desktop") {
-      width: 25%;
+      width: 35%;
     }
 
-    @include media("<=desktop") {
+    @include media("<=tablet") {
       display: none;
     }
 
@@ -99,7 +110,8 @@
 
   .iconsContainer {
     display: flex;
-    @include media("<=desktop") {
+
+    @include media("<=tablet") {
       justify-content: center;
       text-align: center;
     }
@@ -141,6 +153,10 @@
     li {
       margin-bottom: 0.5rem;
       cursor: pointer;
+
+      @include media("<=desktop") {
+        margin-right: 1rem;
+      }
 
       &:hover {
         color: base.$secondary-color;

@@ -1,40 +1,16 @@
-import {
-    GET_DETAILS_BEGIN, 
-} from "../actionsTypes/typesDetails"
+import { COMMENT_BEGIN } from "../actionsTypes/typesComments";
+import { DETAILS_BEGIN } from "../actionsTypes/typesDetails";
 
-import { LOGIN_BEGIN } from "../actionsTypes/authTypes";
-import { REGISTER_BEGIN } from "../actionsTypes/authTypes";
-
-export const LoginAction = (body) => {
+export const CommentAction = (body) => {
   return {
-    type: LOGIN_BEGIN,
+    type: COMMENT_BEGIN,
     body
   };
 };
 
-export const RegisterAction = (body) => {
+export const DetailsAction = (body) => {
   return {
-    type: REGISTER_BEGIN,
-    body
-  };
-};
-import {
-    GET_DETAILS_BEGIN, 
-} from "../actionsTypes/typesDetails"
-
-import { LOGIN_BEGIN } from "../actionsTypes/authTypes";
-import { REGISTER_BEGIN } from "../actionsTypes/authTypes";
-
-export const LoginAction = (body) => {
-  return {
-    type: LOGIN_BEGIN,
-    body
-  };
-};
-
-export const RegisterAction = (body) => {
-  return {
-    type: REGISTER_BEGIN,
+    type: DETAILS_BEGIN,
     body
   };
 };

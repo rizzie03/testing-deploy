@@ -6,35 +6,28 @@ import { useState } from "react";
 export default Card;
 
 function Card({ data }) {
-  const [comment] = useState([]);
-  console.log("comment", comment);
-  const move = () => {
-    console.log(move);
-    return (
-      <>
-        <div className={CardStyle.card}>
-          <Link to='#' className={CardStyle.cardLink}>
+  return (
+    <>
+      <div className={CardStyle.card}>
+        <Link to={`/posts/${data.id}`} className={CardStyle.cardLink}>
+          <div className={CardStyle.cardImageContainer}>
             <img
-              src={data.image}
+              src={data.imageEvent}
               alt={`${data.title}`}
               className={CardStyle.cardImage}
             />
-          </Link>
-          <div className={CardStyle.cardText}>
-            <Link
-              to='/posts'
-              style={{ textDecoration: "none", color: "black" }}
-              onClick={move}>
-              <button className={CardStyle.cardTextChip}>
-                {data.category}
-              </button>
-              <p className={CardStyle.cardTextTime}>{data.time}</p>
-              <p className={CardStyle.cardTextPostTitle}>{data.title}</p>
-              <p className={CardStyle.cardTextAuthor}>{data.author}</p>
-            </Link>
           </div>
-        </div>
-      </>
-    );
-  };
+          <div className={CardStyle.cardText}>
+            <button className={CardStyle.cardTextChip}>{data.category}</button>
+            <p className={CardStyle.cardTextTime}>{data.createdAt}</p>
+            <p className={CardStyle.cardTextPostTitle}>{data.title}</p>
+            <p
+              className={
+                CardStyle.cardTextAuthor
+              }>{`${data.firstName} ${data.lastName}`}</p>
+          </div>
+        </Link>
+      </div>
+    </>
+  );
 }

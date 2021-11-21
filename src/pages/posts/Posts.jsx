@@ -18,11 +18,6 @@ import { useState } from "react";
 // };
 
 function Posts() {
-  // const Posts = () => {
-  //   const { id } = useParams();
-  //   const dispatch = useDispatch();
-  //   useEffect
-  // };
   const [comment, setComment] = useState("");
   const [listComment, setListComment] = useState([]);
   console.log("list", listComment);

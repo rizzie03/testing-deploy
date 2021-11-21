@@ -1,12 +1,14 @@
 import { combineReducers } from "redux";
-import { authReducer } from "./authReducer"
-import { eventReducer } from "./eventReducer"
-import commentReducer from "./commentReducer"
+import { authReducer } from "./authReducer";
+import eventsReducer from "./eventsReducer";
+import categoriesReducer from "./categoriesReducer";
+import commentReducer from "./commentReducer";
 
 const rootReducer = combineReducers({
-  auth: authReducer, // ini untuk menampung user yang sedang login + simpan token (punya bang zain),
-  events: eventReducer,// ini untuk menampungpunya destin dan channy(siap2 conflict wkwkwkw) (btw data2 events ini termasuk ke dalamnya ada comments juga ya tin)
-  comment: commentReducer
+  auth: authReducer,
+  events: eventsReducer,
+  categories: categoriesReducer,
+  comment: commentReducer,
 });
 
 export default rootReducer;

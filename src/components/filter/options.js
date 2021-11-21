@@ -1,11 +1,11 @@
 const options = {
   filterByDate: [
-    "Today",
-    "Tomorrow",
-    "This Week",
-    "This Month",
-    "This Year",
-    "All Time",
+    { name: "Today", value: "isthistoday" },
+    { name: "Tomorrow", value: "isthistomorrow" },
+    { name: "This Week", value: "isthisweek" },
+    { name: "This Month", value: "isthismonth" },
+    { name: "This Year", value: "isthisyear" },
+    { name: "All Time", value: "" },
   ],
   filterByCategory: [
     "All Category",
@@ -17,7 +17,10 @@ const options = {
     "Lifestyle",
     "Music",
   ],
-  SortingBy: ["Date", "Name"],
+  sortingBy: [
+    { name: "Date", value: "" },
+    { name: "Name", value: "" },
+  ],
 };
 
 export default options;

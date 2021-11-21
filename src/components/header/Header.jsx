@@ -17,7 +17,7 @@ function Header() {
     window.addEventListener("scroll", handleScroll);
   }, [offsetY]);
   const token = localStorage.getItem("token");
- 
+
   return (
     <>
       <nav
@@ -51,26 +51,24 @@ function Header() {
           </div>
         </div>
         {!token ? (
-          <>
-            <ul className={headerstyle.navContainer}>
-              <li>
-                <Link to="/auth/register" className={headerstyle.link}>
-                  Sign Up
-                </Link>
-              </li>
-              <li>
-                <Link to="/auth/login" className={headerstyle.link}>
-                  Sign In
-                </Link>
-              </li>
-            </ul>
-          </>
+          <ul className={headerstyle.navContainer}>
+            <li>
+              <Link to="/auth/register" className={headerstyle.link}>
+                Sign Up
+              </Link>
+            </li>
+            <li>
+              <Link to="/auth/login" className={headerstyle.link}>
+                Sign In
+              </Link>
+            </li>
+          </ul>
         ) : (
           <div className={headerstyle.user}>
             <div className={headerstyle.userPP}>
-              <img src={UserPP} alt="Your Profile Picture" />
+              <img src={UserPP} alt="Your Profile Pic" />
             </div>
-          <Link to='/account'>My Account</Link>
+            <Link to="/account">My Account</Link>
           </div>
         )}
       </nav>

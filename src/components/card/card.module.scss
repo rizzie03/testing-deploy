@@ -10,7 +10,7 @@
   position: relative;
   z-index: 2;
   display: inline-block;
-  margin: 1.5rem 0;
+  margin: 1.5rem calc((100% - 22.5% * 4) / 10);
 
   @include media("<=tablet") {
     width: 22.5rem;
@@ -27,14 +27,24 @@
     color: inherit;
   }
 
-  &Image {
-    width: 100%;
+  &ImageContainer {
+    height: 20rem;
     border-radius: 8px 8px 0px 0px;
-    margin-bottom: 1rem;
+
+    .cardImage {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 8px 8px 0px 0px;
+    }
+
+    @include media("<=desktop") {
+      height: 15rem;
+    }
   }
 
   &Text {
-    padding: 0 0.25rem 1rem;
+    padding: 1rem 0.25rem;
 
     @include media("<=tablet") {
       font-size: 0.5rem;
@@ -58,6 +68,9 @@
       font-size: 1rem;
       font-weight: 800;
       margin-bottom: 0.5rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     &Author {

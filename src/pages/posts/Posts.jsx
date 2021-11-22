@@ -4,7 +4,7 @@ import PostsStyle from "./posts.module.scss";
 import { FiMessageCircle } from "react-icons/fi";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
-import {useParams} from "react-router-dom"
+import { useParams } from "react-router-dom"
 
 function Posts() {  
   const dispatch = useDispatch();

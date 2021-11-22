@@ -4,7 +4,7 @@ import PostsStyle from "./posts.module.scss";
 import { FiMessageCircle } from "react-icons/fi";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
-import {useParams} from "react-router-dom"
+import { useParams } from "react-router-dom"
 
 function Posts() {  
   const dispatch = useDispatch();
@@ -22,6 +22,7 @@ function Posts() {
   };
 
   const [listComment, setListComment] = useState([]);
+  const [comment, setComment] = useState([]);
   console.log("list", listComment);
   console.log("comment", comment);
   const submitComment = () => {
@@ -58,6 +59,17 @@ function Posts() {
               <FiMessageCircle className={PostsStyle.commentIcon} />
               Submit
             </button>
+            <div>
+        {listComment.length
+          ? listComment.map((item, index) => {
+              return (
+                <div key={index}>
+                  <p>{item}</p>
+                </div>
+              );
+            })
+          : null}
+      </div>
           </form>
         </div>
       </div>

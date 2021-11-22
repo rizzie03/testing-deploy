@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 import { useState } from "react";
 import {useParams} from "react-router-dom"
 
-function Posts() {
+function Posts() {  
   const dispatch = useDispatch();
   const params = useParams();
   console.log(params);
@@ -21,7 +21,6 @@ function Posts() {
     });
   };
 
-  const [comment, setComment] = useState("");
   const [listComment, setListComment] = useState([]);
   console.log("list", listComment);
   console.log("comment", comment);
@@ -66,4 +65,4 @@ function Posts() {
   );
 }
 
-export default Posts;
+export default Posts

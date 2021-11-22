@@ -11,6 +11,8 @@
     &PP {
       @extend %profilePictureContainer;
       overflow: hidden;
+      display: flex;
+      justify-content: center;
 
       img {
         @extend %profilePicture;

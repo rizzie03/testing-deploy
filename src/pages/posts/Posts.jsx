@@ -4,24 +4,23 @@ import PostsStyle from "./posts.module.scss";
 import { FiMessageCircle } from "react-icons/fi";
 // import { useDispatch } from "react-redux";
 import { useState } from "react";
-
-// const dispatch = useDispatch();
-// const [inputs, setInputs] = useState({
-//   title: "",
-// });
-// console.log("inputs", inputs);
-// const changeInput = (e) => {
-//   setInputs({
-//     ...inputs,
-//     [e.target.name]: e.target.value,
-//   });
-// };
+import {useParams} from "react-router-dom"
 
 function Posts() {
-  // const Posts = () => {
-  //   const params = useParams();
-  //   console.log(params);
-  // };
+  const dispatch = useDispatch();
+  const params = useParams();
+  console.log(params);
+  const [inputs, setInputs] = useState({
+    title: "",
+  });
+  console.log("inputs", inputs);
+  const changeInput = (e) => {
+    setInputs({
+      ...inputs,
+      [e.target.name]: e.target.value,
+    });
+  };
+
   const [comment, setComment] = useState("");
   const [listComment, setListComment] = useState([]);
   console.log("list", listComment);

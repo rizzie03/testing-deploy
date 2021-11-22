@@ -22,6 +22,7 @@ function Posts() {
   };
 
   const [listComment, setListComment] = useState([]);
+  const [comment, setComment] = useState([]);
   console.log("list", listComment);
   console.log("comment", comment);
   const submitComment = () => {

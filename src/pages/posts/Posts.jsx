@@ -2,11 +2,11 @@ import Details from "../../components/Contents/Details";
 import Comment from "../../components/comments/Comments";
 import PostsStyle from "./posts.module.scss";
 import { FiMessageCircle } from "react-icons/fi";
-// import { useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useState } from "react";
 import {useParams} from "react-router-dom"
 
-function Posts() {
+function Posts() {  
   const dispatch = useDispatch();
   const params = useParams();
   console.log(params);
@@ -66,4 +66,4 @@ function Posts() {
   );
 }
 
-export default Posts;
+export default Posts

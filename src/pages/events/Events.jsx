@@ -22,9 +22,9 @@ function Events() {
   const fetchEvents = () => {
     dispatch(
       getEventsFetch({
-        slug: `?search=${searchInput}${
+        slug: `?${searchInput ? `search=${searchInput}` : ""}${
           filterDate ? `&${filterDate}=1` : ""
-        }&cat=${filterCategory}${
+        }${filterCategory ? `&cat=${filterCategory}` : ""}${
           sort ? `&${sort}=asc` : ""
         }&page=${page}&limit=${limit}`,
       })

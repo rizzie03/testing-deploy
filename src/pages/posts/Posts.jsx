@@ -21,7 +21,6 @@ function Posts() {
     });
   };
 
-  const [comment, setComment] = useState("");
   const [listComment, setListComment] = useState([]);
   console.log("list", listComment);
   console.log("comment", comment);

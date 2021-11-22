@@ -20,6 +20,7 @@ function Posts() {
       [e.target.name]: e.target.value,
     });
   };
+
   const [listComment, setListComment] = useState([]);
   const [comment, setComment] = useState([]);
   console.log("list", listComment);

@@ -59,6 +59,17 @@ function Posts() {
               <FiMessageCircle className={PostsStyle.commentIcon} />
               Submit
             </button>
+            <div>
+        {listComment.length
+          ? listComment.map((item, index) => {
+              return (
+                <div key={index}>
+                  <p>{item}</p>
+                </div>
+              );
+            })
+          : null}
+      </div>
           </form>
         </div>
       </div>

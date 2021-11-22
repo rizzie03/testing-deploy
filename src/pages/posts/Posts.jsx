@@ -2,20 +2,20 @@ import Details from "../../components/Contents/Details";
 import Comment from "../../components/comments/Comments";
 import PostsStyle from "./posts.module.scss";
 import { FiMessageCircle } from "react-icons/fi";
-import { useDispatch } from "react-redux";
+// import { useDispatch } from "react-redux";
 import { useState } from "react";
 
-const dispatch = useDispatch();
-const [inputs, setInputs] = useState({
-  title: "",
-});
-console.log("inputs", inputs);
-const changeInput = (e) => {
-  setInputs({
-    ...inputs,
-    [e.target.name]: e.target.value,
-  });
-};
+// const dispatch = useDispatch();
+// const [inputs, setInputs] = useState({
+//   title: "",
+// });
+// console.log("inputs", inputs);
+// const changeInput = (e) => {
+//   setInputs({
+//     ...inputs,
+//     [e.target.name]: e.target.value,
+//   });
+// };
 
 function Posts() {
   // const Posts = () => {

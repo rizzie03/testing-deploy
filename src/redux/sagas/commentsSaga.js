@@ -17,9 +17,7 @@ import {
 } from "../action/actionsTypes/typesDetails";
 import axios from "axios";
 
-const baseUrl = "https://api-see-event-teamb.herokuapp.com/posts/:id" 
-//     Headers: bearer = {eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJudXNoYWlyIiwibGFzdE5hbWUiOiJmYWxhaCIsImVtYWlsIjoidGVzdEBtYWlsLmNvbSIsImF2YXRhciI6IjM2NTc3NTI5MjJjYWYzN2EzMmY5OGQ1Mjc1YmUzYWZkLnBuZyIsImlhdCI6MTYzNzE2NTMzOX0.40mqhlC6lVpj4cYaSYkxku4NlKXd7b5GkMAgNh-pj1U}
-// };
+const baseUrl = "https://api-see-event-teamb.herokuapp.com" 
 // down below is function generator (function*)
 function* getComments() {
   try {

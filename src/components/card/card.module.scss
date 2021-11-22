@@ -16,6 +16,10 @@
     width: 22.5rem;
   }
 
+  @include media("<=tablet") {
+    width: 22.5rem;
+  }
+
   &:hover {
     box-shadow: 4px 2px 16px 2px #21445726;
     opacity: 0.75;
@@ -45,6 +49,10 @@
 
   &Text {
     padding: 1rem 0.25rem;
+
+    @include media("<=tablet") {
+      font-size: 0.5rem;
+    }
 
     @include media("<=tablet") {
       font-size: 0.5rem;

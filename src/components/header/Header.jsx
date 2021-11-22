@@ -17,7 +17,6 @@ function Header() {
     window.addEventListener("scroll", handleScroll);
   }, [offsetY]);
   const token = localStorage.getItem("token");
-
   return (
     <>
       <nav

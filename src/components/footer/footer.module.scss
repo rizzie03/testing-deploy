@@ -110,6 +110,10 @@
 
   .iconsContainer {
     display: flex;
+    @include media("<=desktop") {
+      justify-content: center;
+      text-align: center;
+    }
 
     @include media("<=tablet") {
       justify-content: center;

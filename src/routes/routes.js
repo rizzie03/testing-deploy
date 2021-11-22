@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Headers from "../components/header/Header";
 import Home from "../pages/home/Home";
 import Account from "../pages/account/Account";
@@ -10,18 +10,18 @@ import Auth from "../pages/Auth/Auth";
 
 function createRoutes() {
   return (
-    <Router>
+    <>
       <Headers />
       <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route exact path="/account" element={<Account />} />
-        <Route exact path="/events" element={<Events />} />
-        <Route exact path="/posts/:id" element={<Posts />} />
-        <Route path="*" element={<NotFound />} />
-        <Route exact path="/auth/:type" element={<Auth />} />
+        <Route exact path='/' element={<Home />} />
+        <Route exact path='/account' element={<Account />} />
+        <Route exact path='/events' element={<Events />} />
+        <Route exact path='/posts' element={<Posts />} />
+        <Route path='*' element={<NotFound />} />
+        <Route exact path='/auth/:type' element={<Auth />} />
       </Routes>
       <Footer />
-    </Router>
+    </>
   );
 }
 

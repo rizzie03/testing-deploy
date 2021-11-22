@@ -13,6 +13,8 @@
     border-radius: 50%;
     overflow: hidden;
     position: relative;
+    display: flex;
+    justify-content: center;
 
     img {
       height: 100%;

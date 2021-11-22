@@ -1,4 +1,21 @@
 @use "../base";
+@import "../../breakpoints/breakpoints.scss";
+
+@include media ("<=LGdesktop") {
+  
+}
+
+@include media ("<=desktop") {
+  
+}
+
+@include media ("<=tablet") {
+  
+}
+
+@include media ("<=phone") {
+  
+}
 
 .details {
   &Title {

@@ -16,7 +16,7 @@ function createRoutes() {
         <Route exact path='/' element={<Home />} />
         <Route exact path='/account' element={<Account />} />
         <Route exact path='/events' element={<Events />} />
-        <Route exact path='/posts' element={<Posts />} />
+        <Route exact path='/posts/:id' element={<Posts />} />
         <Route path='*' element={<NotFound />} />
         <Route exact path='/auth/:type' element={<Auth />} />
       </Routes>

@@ -4,6 +4,6 @@ import App from "./App";
 
 test("check if there is sign in link", () => {
   render(<App />);
-  const linkElement = screen.getByText(/Sign In/i);
+  const linkElement = screen.getByText(/Sign In/i); //CHANNY
   expect(linkElement).toBeInTheDocument();
 });

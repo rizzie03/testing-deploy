@@ -1,6 +1,9 @@
 import CardStyle from "./card.module.scss";
 // import CardImage from "../../assets/img/cardImage.jpg";
 import { Link } from "react-router-dom";
+// import post from "../../../src/pages/posts/Posts"
+import { useState } from "react";
+export default Card;
 
 function Card({ data }) {
   return (
@@ -19,13 +22,12 @@ function Card({ data }) {
             <p className={CardStyle.cardTextTime}>{data.createdAt}</p>
             <p className={CardStyle.cardTextPostTitle}>{data.title}</p>
             <p
-              className={CardStyle.cardTextAuthor}
-            >{`${data.firstName} ${data.lastName}`}</p>
+              className={
+                CardStyle.cardTextAuthor
+              }>{`${data.firstName} ${data.lastName}`}</p>
           </div>
         </Link>
       </div>
     </>
   );
 }
-
-export default Card;

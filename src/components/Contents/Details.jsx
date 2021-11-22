@@ -59,6 +59,7 @@ export default function Details() {
         <div className={detailstyle.detailsMainAuthor}>
           <div className={detailstyle.detailsMainAuthorAvatar}>
             <img
+              className={detailstyle.detailsAvatarImage}
               src={`https://s3-alpha-sig.figma.com/img/35b3/2335/854ac739a1a54b9219037b25b41868ec?Expires=1637539200&Signature=Oz3SVcR-o82BCEN6DCjkzJ6Mz7~zXAkIJhyPQEEhwxntQxeEA~QbFQnSOqJRmcJAibnBlroJFLbEJz3Llc3yOzV0q7d6st~RJUBBGtVqmS~EsFv414yK543KFbnIqMucAdzyG7jlud4pYPpBuvWMsJnX4ofkmljy47gjUt6wV6zFeMiybHCkVgbOkKyxuHkYZqCWQZrRmOlEcbvPDEjmgPp6YTEETvXcCkm9H9dyJOZxCyNWK8XXARkLWNx5LT67HmohFKsPYJ3CVvnmd4HHmH6AvVuz-Z2k~LT50KlGFW6CTnv~b-oA8sU0-AXK-NllAJynMQ1OycWPIWSnAE5DGg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA`}
               alt='Author'
             />

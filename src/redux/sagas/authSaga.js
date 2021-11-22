@@ -15,7 +15,6 @@ const baseUrl = "https://api-see-event-teamb.herokuapp.com/";
 
 function* login(action) {
   const { body } = action;
-
   try {
     const res = yield axios.post(`${baseUrl}login`, body);
     console.log(res);

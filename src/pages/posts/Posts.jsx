@@ -21,8 +21,8 @@ function Posts() {
     });
   };
 
-  const [comment, setComment] = useState("");
   const [listComment, setListComment] = useState([]);
+  const [comment, setComment] = useState([]);
   console.log("list", listComment);
   console.log("comment", comment);
   const submitComment = () => {
@@ -59,6 +59,17 @@ function Posts() {
               <FiMessageCircle className={PostsStyle.commentIcon} />
               Submit
             </button>
+            <div>
+        {listComment.length
+          ? listComment.map((item, index) => {
+              return (
+                <div key={index}>
+                  <p>{item}</p>
+                </div>
+              );
+            })
+          : null}
+      </div>
           </form>
         </div>
       </div>

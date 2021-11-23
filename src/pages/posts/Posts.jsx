@@ -24,7 +24,6 @@ function Posts() {
       [e.target.name]: e.target.value,
     });
   };
-
   const [listComment, setListComment] = useState([]);
   const [comment, setComment] = useState([]);
   console.log("list", listComment);
@@ -65,6 +64,7 @@ function Posts() {
               Submit
             </button>
             <div>
+
               {listComment.length
                 ? listComment.map((item, index) => {
                     return (
@@ -75,11 +75,21 @@ function Posts() {
                   })
                 : null}
             </div>
+=======
+        {listComment.length
+          ? listComment.map((item, index) => {
+              return (
+                <div key={index}>
+                  <p>{item}</p>
+                </div>
+              );
+            })
+          : null}
+      </div>
           </form>
         </div>
       </div>
     </>
   );
 }
-
 export default Posts;

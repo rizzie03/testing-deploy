@@ -27,6 +27,7 @@ function* login(action) {
     );
   } catch (err) {
     console.log(err);
+    // alert("email atau password anda salah");
     yield put({
       type: LOGIN_FAIL,
       error: err,

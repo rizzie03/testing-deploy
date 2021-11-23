@@ -3,7 +3,7 @@ import CardStyle from "./card.module.scss";
 import { Link } from "react-router-dom";
 // import post from "../../../src/pages/posts/Posts"
 import { useState } from "react";
-export default Card;
+import moment from "moment";
 
 function Card({ data }) {
   return (
@@ -19,15 +19,18 @@ function Card({ data }) {
           </div>
           <div className={CardStyle.cardText}>
             <button className={CardStyle.cardTextChip}>{data.category}</button>
-            <p className={CardStyle.cardTextTime}>{data.createdAt}</p>
+            <p className={CardStyle.cardTextTime}>
+              {moment(data.createdAt).format("ddd, MMM D [@] h:mm [ICT]")}
+            </p>
             <p className={CardStyle.cardTextPostTitle}>{data.title}</p>
             <p
-              className={
-                CardStyle.cardTextAuthor
-              }>{`${data.firstName} ${data.lastName}`}</p>
+              className={CardStyle.cardTextAuthor}
+            >{`${data.firstName} ${data.lastName}`}</p>
           </div>
         </Link>
       </div>
     </>
   );
 }
+
+export default Card;

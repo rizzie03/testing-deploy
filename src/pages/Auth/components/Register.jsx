@@ -75,7 +75,7 @@ function SignUp() {
 
   const validasiInputConfirmPassword = (data) => {
     console.log(isConfirmPassword);
-    if (data === "" || isConfirmPassword !== register.password) {
+    if (data === "" || data !== register.password) {
       setIsConfirmPassword(false);
     } else {
       setIsConfirmPassword(true);

@@ -2,14 +2,18 @@ import Details from "../../components/Contents/Details";
 import Comment from "../../components/comments/Comments";
 import PostsStyle from "./posts.module.scss";
 import { FiMessageCircle } from "react-icons/fi";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
 import { useState } from "react";
-import { useParams } from "react-router-dom"
+import { useParams } from "react-router-dom";
+import { getCommentsAction, postCommentsAction } from "../../redux/action/actions/actionComments";
 
-function Posts() {  
+function Posts() {
   const dispatch = useDispatch();
-  const params = useParams();
-  console.log(params);
+  useEffect(() => {
+    dispatch(getCommentsAction(id), (postCommentsAction(id)));
+  }, []);
+  const id = useParams();
   const [inputs, setInputs] = useState({
     title: "",
   });
@@ -46,7 +50,8 @@ function Posts() {
             </div>
           </div>
           <form>
-            <textarea onChange={(e) => setComment(e.target.value)}
+            <textarea
+              onChange={(e) => setComment(e.target.value)}
               placeholder='Enter your comment here'
               name=''
               id=''
@@ -59,6 +64,18 @@ function Posts() {
               Submit
             </button>
             <div>
+
+              {listComment.length
+                ? listComment.map((item, index) => {
+                    return (
+                      <div key={index}>
+                        <p>{item}</p>
+                      </div>
+                    );
+                  })
+                : null}
+            </div>
+=======
         {listComment.length
           ? listComment.map((item, index) => {
               return (
@@ -75,5 +92,4 @@ function Posts() {
     </>
   );
 }
-
-export default Posts
+export default Posts;

@@ -28,8 +28,8 @@
     @include media("<=phone") {
       // margin-bottom: 0;
       font-size: 1rem;
-      margin-bottom: 1.5rem;
-      margin-top: 5rem;
+      margin-bottom: 0.5rem;
+      margin-top: 0rem;
     }
   }
   .signupInputError {
@@ -69,6 +69,7 @@
     width: 35rem;
     // border: 1px solid base.$error-color;
     margin: 1rem 0 0;
+    padding: 0;
 
     @include media("<=phone") {
       //height: 2rem;
@@ -82,15 +83,15 @@
       // margin: 10rem 0 0;
     }
 
-    .signupInputPassword {
-      @extend %inputpasswordStyle;
-      @include media("<=phone") {
-        height: 2rem;
-        padding-left: 0.75rem;
-        border-radius: 99px;
-        font-size: 0.75rem;
-      }
-    }
+    // .signupInputPassword {
+    //   @extend %inputpasswordStyle;
+    //   @include media("<=phone") {
+    //     height: 2rem;
+    //     padding-left: 0.75rem;
+    //     border-radius: 99px;
+    //     font-size: 0.75rem;
+    //   }
+    // }
 
     .eyeIcon {
       position: absolute;
@@ -102,6 +103,34 @@
         margin-top: 0.1rem;
       }
     }
+
+    .signupInput {
+      @extend %inputbuttonStyle;
+      outline: #999;
+      border: 1px solid #999;
+      display: block;
+      @include media("<=phone") {
+        width: 17rem;
+        padding: 0.5rem;
+        
+      }
+  
+      &:focus {
+        outline: black;
+        border: 1px solid black;
+      }
+  
+      &::placeholder {
+        font-size: 1rem;
+        @include media("<=phone") {
+          font-size: 0.75rem;
+        }
+      }
+  
+      &:nth-of-type(1) {
+        margin: 1.25rem 0 ;
+      }
+    }
   }
 
   .signupInput {
@@ -110,9 +139,9 @@
     border: 1px solid #999;
     display: block;
     @include media("<=phone") {
-      font-size: 0.75rem;
-      margin-top: 0.1rem;
       width: 17rem;
+      padding: 0.5rem;
+      
     }
 
     &:focus {
@@ -122,10 +151,13 @@
 
     &::placeholder {
       font-size: 1rem;
+      @include media("<=phone") {
+        font-size: 0.75rem;
+      }
     }
 
     &:nth-of-type(1) {
-      margin-top: 1.5rem;
+      margin-top: 1.25rem 0;
     }
   }
 
@@ -147,7 +179,7 @@
       width: 17rem;
       margin: auto;
       font-size: 0.75rem;
-      margin-top: 0.5rem;
+      margin-top: 1.25rem;
       margin-bottom: -0.5rem;
     }
   }
@@ -180,7 +212,7 @@
       padding-left: 1rem;
       font-size: 0.5rem;
       margin-top: 0.5rem;
-      margin-bottom: -0.5rem;
+      margin-bottom: 0rem;
     }
   }
 }
